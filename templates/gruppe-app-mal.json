@@ -1,0 +1,37 @@
+{
+  "requestor": "bruker@domain.no",
+  "justification": "Opprettelse av gruppe og app for prosjekt X",
+  "timestamp": "2025-05-27T10:00:00Z",
+  "groups": [
+    {
+      "displayName": "Grp-Prosjekt-X",
+      "description": "Tilgangsgruppe for prosjekt X",
+      "mailNickname": "grp-prosjekt-x",
+      "groupType": "Security",
+      "visibility": "Private",
+      "owners": ["leder1@domain.no"],
+      "members": ["bruker1@domain.no", "bruker2@domain.no"]
+    }
+  ],
+  "applications": [
+    {
+      "displayName": "App-Prosjekt-X",
+      "identifierUris": ["api://app-prosjekt-x"],
+      "signInAudience": "AzureADMyOrg",
+      "redirectUris": ["https://app.domain.no/callback"],
+      "requiredResourceAccess": [
+        {
+          "resourceAppId": "00000003-0000-0000-c000-000000000000",
+          "resourceAccess": [
+            {
+              "id": "df021288-bdef-4463-88db-98f22de89214",
+              "type": "Role"
+            }
+          ]
+        }
+      ],
+      "owners": ["appansvarlig@domain.no"]
+    }
+  ]
+}
+
